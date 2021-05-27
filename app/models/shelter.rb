@@ -5,6 +5,11 @@ class Shelter < ApplicationRecord
 
   has_many :pets, dependent: :destroy
 
+  def self.shelters_with_pending_applications
+    joins(pets: :applications)
+    where(:status == "Pending").uniq
+  end
+
   def self.order_by_alphabet
     find_by_sql("SELECT * FROM shelters ORDER BY LOWER(shelters.name) DESC")
   end

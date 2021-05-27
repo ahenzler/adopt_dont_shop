@@ -17,7 +17,7 @@ RSpec.describe 'the admin shelter index' do
     @veterinarian_1 = @veterinarian_office_1.veterinarians.create!(on_call: true, review_rating: 5, name: "Dr. David")
     @veterinarian_2 = @veterinarian_office_2.veterinarians.create!(on_call: false, review_rating: 5, name: "Dr. Josh")
 
-    @application_1 = Application.create!(name: "George", state: "Idaho", city: "Boise", zip_code: 83616, address: "395 Middle Street", description: "Student", status: "In Progress")
+    @application_1 = Application.create!(name: "George", state: "Idaho", city: "Boise", zip_code: 83616, address: "395 Middle Street", description: "Student", status: "Pending")
     @application_2 = Application.create!(name: "Fred", state: "Idaho", city: "Star", zip_code: 83616, address: "395 State Street", description: "Archeologist", status: "In Progress")
     @application_3 = Application.create!(name: "Charlie", state: "Colorado", city: "Nampa", zip_code: 83616, address: "395 Eagle Road", description: "Geologist", status: "In Progress")
     @application_4 = Application.create!(name: "Bill", state: "Colorado", city: "Kuna", zip_code: 83616, address: "395 Purple Street", description: "River Guide", status: "In Progress")
@@ -35,5 +35,11 @@ RSpec.describe 'the admin shelter index' do
 
     expect(page).to have_content(@shelter_1.name)
     expect(page).to have_content(@shelter_2.name)
+  end
+
+  it 'has a shelter with pending applications section' do
+    expect(page).to have_content("Shelter's With Pending Applications")
+    expect(page).to have_content(@shelter_1.name)
+    expect(page).to have_no_content(@shelter_2.name)
   end
 end
