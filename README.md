@@ -217,7 +217,7 @@ Then I see all Shelters in the system listed in reverse alphabetical order by na
 ```
 
 ```
-[] done 11
+[x] done 11
 For this story, you should fully leverage ActiveRecord methods in your query.
 
 Shelters with Pending Applications
