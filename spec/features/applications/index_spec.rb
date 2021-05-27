@@ -28,6 +28,11 @@ RSpec.describe 'the application index' do
     visit "/applications"
   end
 
+
+  it "has lists applications" do
+    expect(page).to have_content()
+  end
+
   it "has new application link" do
     expect(page).to have_link("Start an Application")
   end
