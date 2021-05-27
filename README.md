@@ -212,6 +212,7 @@ Admin Shelters Index
 As a visitor
 When I visit the admin shelter index ('/admin/shelters')
 Then I see all Shelters in the system listed in reverse alphabetical order by name
+"""'''sql find_by_sql("SELECT * FROM shelters ORDER BY LOWER(shelters.name) DESC")'''"""
 ```
 
 ```
