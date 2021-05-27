@@ -1,0 +1,8 @@
+<h2>Submit Your Application</h2>
+    <%= form_with url: "/applications/#{@application.id}", method: :post, local: true do |f| %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit "Submit Application" %>
+      <% end %>

@@ -179,7 +179,7 @@ Then I do not see a section to submit my application
 These stories emphasize key database concepts
 
 ```
-[ ] done
+[x] done 8
 
 Partial Matches for Pet Names
 
@@ -191,7 +191,7 @@ For example, if I search for "fluff", my search would match pets with names "flu
 ```
 
 ```
-[ ] done
+[x] done 9
 
 Case Insensitive Matches for Pet Names
 
@@ -203,6 +203,8 @@ For example, if I search for "fluff", my search would match pets with names "Flu
 ```
 
 ```
+[x] done 10
+
 SQL Only Story
 
 For this story, you should write your queries in raw sql. You can use the ActiveRecord find_by_sql method to execute raw sql queries: https://guides.rubyonrails.org/active_record_querying.html#finding-by-sql
@@ -215,6 +217,7 @@ Then I see all Shelters in the system listed in reverse alphabetical order by na
 ```
 
 ```
+[] done 11
 For this story, you should fully leverage ActiveRecord methods in your query.
 
 Shelters with Pending Applications
@@ -232,7 +235,7 @@ Pets on an application can either be accepted or rejected.
 For this set of stories, we will be making routes that begin with '/admin'. This is to indicate that only a user with special privileges should be able to accept or reject pets on an application. Normally, we would want to make sure that a user is logged into an admin account before being able complete any of this workflow, but we will not add any log in or authorization functionality to this project.
 
 ```
-[ ] done
+[] done 12
 
 Approving a Pet for Adoption
 
@@ -246,7 +249,7 @@ And instead I see an indicator next to the pet that they have been approved
 ```
 
 ```
-[ ] done
+[] done 13
 
 Rejecting a Pet for Adoption
 
@@ -260,6 +263,8 @@ And instead I see an indicator next to the pet that they have been rejected
 ```
 
 ```
+[] done 14
+
 Approved/Rejected Pets on one Application do not affect other Applications
 
 As a visitor
@@ -276,7 +281,7 @@ And instead I see buttons to approve or reject the pet for this specific applica
 Once all pets on an application have been marked either accepted or rejected, then the application is no longer "Pending". If all the pets were accepted, then the application is "Accepted". If one or more pets on the application is rejected, then the entire application is "Rejected".
 
 ```
-[ ] done
+[] done 15
 
 All Pets Accepted on an Application
 
@@ -288,7 +293,7 @@ And I see the application's status has changed to "Approved"
 ```
 
 ```
-[ ] done
+[] done 16
 
 One or More Pets Rejected on an Application
 
@@ -301,6 +306,8 @@ And I see the application's status has changed to "Rejected"
 ```
 
 ```
+[] done 17
+
 Application Approval makes Pets not adoptable
 
 As a visitor
@@ -313,7 +320,7 @@ Then I see that those pets are no longer "adoptable"
 ```
 Pets can only have one approved application on them at any time
 
-[ ] done
+[] done 18
 
 As a visitor
 When a pet has an "Approved" application on them
