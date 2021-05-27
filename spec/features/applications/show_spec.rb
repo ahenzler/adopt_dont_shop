@@ -43,6 +43,22 @@ before(:each) do
   it "has add a pet to application form" do
     visit "/applications/#{@application_1.id}"
 
+    fill_in 'Search', with: "Wanda"
+    click_on("Search")
+
+    expect(page).to have_content("Add a Pet to this Application")
+    expect(page).to have_content("Wanda")
+  end
+
+  it "has a case insensitive and partial match when searching" do
+    visit "/applications/#{@application_1.id}"
+
+    fill_in 'Search', with: "wanDa"
+    click_on("Search")
+
+    expect(page).to have_content("Add a Pet to this Application")
+    expect(page).to have_content("Wanda")
+
     fill_in 'Search', with: "W"
     click_on("Search")
 
