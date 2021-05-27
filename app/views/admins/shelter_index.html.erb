@@ -4,8 +4,9 @@
 <% end %>
 
 <br>
-
-<h2>Shelter's With Pending Applications</h2>
-<%@shelters_list.each do |shelter| %>
-<p><%= shelter.name %></p>
-<% end %>
+<section id = 'pending-apps'>
+  <h2>Shelter's With Pending Applications</h2>
+  <%@shelters_list.each do |shelter| %>
+  <p><%= shelter.name %></p>
+  <% end %>
+</section>
