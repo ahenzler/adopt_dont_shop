@@ -66,5 +66,17 @@ RSpec.describe 'the application show' do
     expect(page).to have_link("Wanda")
   end
 
+  it "has a submit application button" do
+    visit "/applications/#{@application_1.id}"
 
+    fill_in 'Search', with: "Wanda"
+    click_on("Search")
+    click_on("Adopt this Pet")
+    fill_in 'Description', with: "A responsible animal lover"
+    click_on("Submit Application")
+
+    expect(page).to have_link("Wanda")
+    expect(page).to have_no_content("Search")
+    expect(page).to have_no_content("Submit Application")
+  end
 end
