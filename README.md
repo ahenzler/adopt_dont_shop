@@ -32,7 +32,7 @@ During your Check In, you should be prepared to review your database schema for 
 
 ## Evaluation
 
-Before your evaluation, choose 2 user stories to present in a small group. Try to pick user stories that you think will deliever the highest value in terms of feedback from the instructor and peers. 
+Before your evaluation, choose 2 user stories to present in a small group. Try to pick user stories that you think will deliever the highest value in terms of feedback from the instructor and peers.
 
 During the evaluation, you will present your user story:
 
@@ -45,7 +45,7 @@ During the evaluation, you will present your user story:
 ## Deploy
 
 ```
-[ ] done
+[x] done
 
 Deploy your application to Heroku
 
@@ -63,7 +63,7 @@ Use these guides: https://devcenter.heroku.com/articles/getting-started-with-rai
 Visitors to the site will be able to create applications to adopt pets. An application has many pets. Pets can have many applications.
 
 ```
-[ ] done
+[x] done 1
 
 Application Show Page
 
@@ -73,12 +73,14 @@ Then I can see the following:
 - Name of the Applicant
 - Full Address of the Applicant including street address, city, state, and zip code
 - Description of why the applicant says they'd be a good home for this pet(s)
+
 - names of all pets that this application is for (all names of pets should be links to their show page)
+
 - The Application's status, either "In Progress", "Pending", "Accepted", or "Rejected"
 ```
 
 ```
-[ ] done
+[x] done 2
 
 Starting an Application
 
@@ -100,7 +102,7 @@ And I see an indicator that this application is "In Progress"
 ```
 
 ```
-[ ] done
+[x] done 3
 
 Starting an Application, Form not Completed
 
@@ -113,7 +115,7 @@ And I see a message that I must fill in those fields.
 ```
 
 ```
-[ ] done
+[x] done 4
 
 Searching for Pets for an Application
 
@@ -129,7 +131,7 @@ And under the search bar I see any Pet whose name matches my search
 ```
 
 ```
-[ ] done
+[x] done 5
 
 Add a Pet to an Application
 
@@ -144,7 +146,7 @@ And I see the Pet I want to adopt listed on this application
 ```
 
 ```
-[ ] done
+[x] done 6
 
 Submit an Application
 
@@ -162,7 +164,7 @@ And I do not see a section to add more pets to this application
 ```
 
 ```
-[ ] done
+[x] done 7
 
 No Pets on an Application
 
