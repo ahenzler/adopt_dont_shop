@@ -12,7 +12,6 @@ RSpec.describe Application, type: :model do
     it { should validate_presence_of(:city) }
     it { should validate_presence_of(:zip_code) }
     it { should validate_presence_of(:address) }
-    it { should validate_presence_of(:description) }
     it { should validate_presence_of(:status) }
   end
 
@@ -38,13 +37,13 @@ RSpec.describe Application, type: :model do
   describe 'class methods' do
     describe '#applicant name' do
       it 'returns partial matches' do
-        expect(Pet.search("Claw")).to eq([@pet_2])
+        expect(Pet.search("Sir")).to eq([@pet_1])
       end
     end
 
     describe '#adoptable' do
       it 'returns adoptable pets' do
-        expect(Pet.adoptable).to eq([@pet_1, @pet_2])
+        expect(Pet.adoptable).to eq([@pet_1, @pet_5])
       end
     end
   end
@@ -52,7 +51,7 @@ RSpec.describe Application, type: :model do
   describe 'instance methods' do
     describe '.shelter_name' do
       it 'returns the shelter name for the given pet' do
-        expect(@pet_3.shelter_name).to eq(@shelter_1.name)
+        expect(@pet_1.shelter_name).to eq(@shelter_1.name)
       end
     end
   end

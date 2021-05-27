@@ -41,13 +41,13 @@ RSpec.describe Pet, type: :model do
   describe 'class methods' do
     describe '#search' do
       it 'returns partial matches' do
-        expect(Pet.search("Claw")).to eq([@pet_2])
+        expect(Pet.search("Sir")).to eq([@pet_1])
       end
     end
 
     describe '#adoptable' do
       it 'returns adoptable pets' do
-        expect(Pet.adoptable).to eq([@pet_1, @pet_2])
+        expect(Pet.adoptable).to eq([@pet_1, @pet_5])
       end
     end
   end
