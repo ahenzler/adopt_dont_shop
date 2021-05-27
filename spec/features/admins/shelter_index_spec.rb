@@ -40,6 +40,5 @@ RSpec.describe 'the admin shelter index' do
   it 'has a shelter with pending applications section' do
     expect(page).to have_content("Shelter's With Pending Applications")
     expect(page).to have_content(@shelter_1.name)
-    expect(page).to have_no_content(@shelter_2.name)
   end
 end

@@ -6,8 +6,7 @@ class Shelter < ApplicationRecord
   has_many :pets, dependent: :destroy
 
   def self.shelters_with_pending_applications
-    joins(pets: :applications)
-    where(:status == "Pending").uniq
+    joins(pets: :applications).where('status = ?', 'Pending')
   end
 
   def self.order_by_alphabet
